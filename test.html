@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Working With Style</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/mint-choc/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>
+    $(function () {
+      $('a').button();
+      $('#datePicker').datepicker();
+      $('#dialog').dialog({
+        width: 400,
+        minWidth: 400,
+        height: 150,
+        minHeight: 120,
+        draggable: false,
+        title: 'I am the creator of my destiny...',
+        open: function(){
+          $('body').css({background: "#333333"});
+        },
+        close: function () {
+            $('body').css({background: "#123456"});
+        }
+      });
+
+      // if ($('#dialog').dialog('isOpen')) {
+      //     $('#dialog').dialog('close');
+      // } else {
+      //     $('#dialog').dialog('open');
+      // }
+    });
+    </script>
+
+    <style>
+      body {
+        background: #B32505;
+      }
+    </style>
+  </head>
+
+  <body>
+    <a href="http://02geek.com/catalog">Catalog</a>
+    <a href="http://02geek.com/books">Books</a>
+    <a href="http://02geek.com/tools">Tools</a>
+    <a href="http://blog.everythingfla.com">My Blog</a>
+    <br><br>
+    Select a date: <input type="text" id="datePicker">
+
+    <div id="dialog" title="jQuery UI">
+      <h1>Welcome to our site</h1>
+      <p>You are going to have a lot of fun.</p>
+    </div>
+
+    <h1>Fill to join our newsletter</h1>
+    <form action="http://02geek.com/optin" method="POST" title="We want to know your name because we want to know your name.">
+      Name: <input type="text" name="data[name]">
+      email: <input type="text" name="email" title="Give us your email, bitch!!!">
+      <input type="submit" value="Send">
+    </form>
+  </body>
+</html>
