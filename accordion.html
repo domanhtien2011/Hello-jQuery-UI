@@ -21,6 +21,25 @@
 
         // Menu
         $('#menu').menu();
+
+        // Slider
+        $('#rgb').slider({
+          max: 255,
+          slide: updateBackground,
+          change: updateBackground
+        });
+
+        function updateBackground (e, ui) {
+            var hex = ui.value.toString(16);
+            if (hex.length != 2) {
+              hex = "0" + hex;
+                }
+            hex = "#" + hex + hex + hex;
+            $('body').css({background:hex});
+        }
+
+        // Accordion
+        $('#topics').accordion({header:'> div > h2'});
       });
     </script>
 
@@ -82,5 +101,29 @@
         </ul>
       </li>
     </ul>
+    <hr>
+    <br>
+    <!-- Playing with Slider -->
+    <h1>I am playing with jQuery UI Slider Yo!!! :))</h1>
+    <div id="rgb"></div>
+    <hr>
+    <br>
+
+    <!-- Accordion -->
+    <h1>I am playing with jQuery UI Accordion</h1>
+    <div id="topics">
+      <div id="topic1">
+        <h2>Why us?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad quod excepturi obcaecati consequuntur. At quia, autem asperiores minus doloremque beatae laborum voluptas libero rerum aut rem aliquid amet quae molestiae!</p>
+      </div>
+      <div id="topic2">
+        <h2>Our value</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia ducimus voluptatum aut sapiente unde, non rem culpa. Sint, nobis repellendus esse debitis, similique quam maiores molestias, accusantium, magnam cupiditate ratione.</p>
+      </div>
+      <div id="topic3">
+        <h2>Last Pitch</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat asperiores libero necessitatibus temporibus, modi voluptate expedita ab ullam, laudantium minus maiores omnis eius illo consectetur distinctio laborum, sapiente aspernatur laboriosam.</p>
+      </div>
+    </div>
   </body>
 </html>
