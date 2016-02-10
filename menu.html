@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Spinner</title>
     <meta charset="utf-8">
     <title>Spinner</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/mint-choc/jquery-ui.css">
@@ -9,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
     <script>
       $(function () {
-        $('a').button();
+        $('#linkButton').button();
         $('#datePicker').datepicker();
 
          // Tooltip
@@ -30,30 +29,50 @@
   </head>
 
   <body>
-    <a href="http://02geek.com/catalog">Catalog</a>
-    <a href="http://02geek.com/books">Books</a>
-    <a href="http://02geek.com/tools">Tools</a>
-    <a href="http://blog.everythingfla.com">My Blog</a>
+    <div id="linkButton">
+      <a href="http://02geek.com/catalog">Catalog</a>
+      <a href="http://02geek.com/books">Books</a>
+      <a href="http://02geek.com/tools">Tools</a>
+      <a href="http://blog.everythingfla.com">My Blog</a>
+    </div>
     <br><br>
     <span>Select a date: <input type="text" id="datePicker" title="Click here to pick a date..."></span>
-
-    <div id="dialog" title="jQuery UI">
-      <h1>Welcome to our site</h1>
-      <p>You are going to have a lot of fun.</p>
-    </div>
-
-    <h1>Fill to join our newsletter</h1>
-
+    <hr>
     <!-- Tooltip -->
+    <h1>I am playing with jQuery UI tooltip</h1>
+    <p>Fill to join our newsletter</p>
     <form action="http://02geek.com/optin" method="POST" title="We want to know your name because we want to know your name.">
       Name: <input type="text" name="data[name]">
       email: <input type="text" name="email" title="Give us your email, bitch!!!">
       <input type="submit" value="Send" title="Click to submit...">
     </form>
+    <hr>
     <br><br>
 
     <!-- Spinner -->
-    <span>I am playing with spinner in jQuery UI: </span>
+    <span><h1>I am playing with spinner in jQuery UI: </h1></span>
     <input type="text" id="spinner" title="Use the up and down arrow in this box to choose your value...">
+    <hr>
+    <br><br>
+    <!-- Menu -->
+    <h1>I am playing with jQuery UI Menu</h1>
+    <ul id="menu">
+      <li>JavaScript
+        <ul>
+          <li><a href="http://02geek.com/books/html5-graphics-visualization-cookbook.html">This is my Book Published with Packt</a></li>
+        </ul>
+      </li>
+      <li>AIR, iOS, and Android
+        <ul>
+          <li><a href="http://02geek.com/books/flash-development-for-android-cookbook.html">Flash Development for Android Cookbook</a></li>
+        </ul>
+      </li>
+      <li>HTML5
+        <ul>
+          <li><a href="http://02geek.com/books/html5-graphics-visualization-cookbook.html">HTML5 Graphics &amp; Data Visualization Cookbook</a></li>
+          <li><a href="http://02geek.com/books/HTML5-Canvas-Cookbook.html">HTML5 Canvas Cookbook</a></li>
+        </ul>
+      </li>
+    </ul>
   </body>
 </html>
